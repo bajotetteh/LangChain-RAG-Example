@@ -6,7 +6,7 @@ from langchain.vectorstores.chroma import Chroma
 import os
 import shutil
 
-CHROMA_PATH = "chroma"
+CHROMA_PATH = "C:\\Users\\Bajo\\Desktop\\VS_Code\\Toy_Example\\chroma"
 DATA_PATH = "C:\\Users\\Bajo\\Desktop\\VS_Code\\Toy_Example\\data\\books"
 
 
