@@ -6,8 +6,10 @@ from langchain.vectorstores.chroma import Chroma
 import os
 import shutil
 
+openai_api_key="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"
+
 CHROMA_PATH = "chroma"
-DATA_PATH = "data/articles"
+DATA_PATH = "C:\\Users\\Bajo\\Desktop\\VS_Code\\Toy_Example\\data\\books"
 
 
 def main():
@@ -47,6 +49,10 @@ def save_to_chroma(chunks: list[Document]):
     # Clear out the database first.
     if os.path.exists(CHROMA_PATH):
         shutil.rmtree(CHROMA_PATH)
+
+    openai_api_key = os.environ.get("OPENAI_API_KEY")
+    if not openai_api_key:
+        raise ValueError("No OpenAI API key found. Set the OPENAI_API_KEY environment variable.")
 
     # Create a new DB from the documents.
     db = Chroma.from_documents(
