@@ -6,8 +6,6 @@ from langchain.vectorstores.chroma import Chroma
 import os
 import shutil
 
-openai_api_key="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"
-
 CHROMA_PATH = "chroma"
 DATA_PATH = "C:\\Users\\Bajo\\Desktop\\VS_Code\\Toy_Example\\data\\books"
 
