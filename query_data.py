@@ -17,13 +17,9 @@ Answer the question based only on the following context:
 Answer the question based on the above context: {question}
 """
 
-
 def main():
-    # Create CLI.
-    parser = argparse.ArgumentParser()
-    parser.add_argument("query_text", type=str, help="The query text.")
-    args = parser.parse_args()
-    query_text = args.query_text
+    # Question
+    query_text = "What are some reasons why African Americans have a higher rate of depression than other races?"
 
     # Prepare the DB.
     embedding_function = OpenAIEmbeddings()
